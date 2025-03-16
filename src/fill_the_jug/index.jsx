@@ -9,15 +9,22 @@ const FillTheJug = () => {
     setFillingPercentage((prev) => {
       if (prev === 0) return 1;
 
-      const change = prev + prev * 0.4;
+      const change = prev + prev * 0.6;
       return change > 100 ? 100 : change;
+    });
+  };
+
+  const emptyTheJug = () => {
+    setFillingPercentage((prev) => {
+      if (prev < 1) prev = 0;
+      return prev - prev * 0.2;
     });
   };
 
   return (
     <div>
       <Jug fillingPercentage={fillingPercentage} />
-      <FillerButtons fillTheJug={fillTheJug} />
+      <FillerButtons fillTheJug={fillTheJug} emptyTheJug={emptyTheJug} />
     </div>
   );
 };
