@@ -1,9 +1,6 @@
 import React from "react";
 
-const FillerButtons = () => {
-  const fillTheJug = () => {
-    console.log("barbe");
-  };
+const FillerButtons = ({ fillTheJug }) => {
   const emptyTheJug = () => {
     console.log("kombe");
   };
