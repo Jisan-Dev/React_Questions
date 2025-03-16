@@ -1,8 +1,10 @@
+import FillTheJug from "./fill_the_jug";
+
 function App() {
   return (
-    <>
-      <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    </>
+    <div className="flex justify-center p-20">
+      <FillTheJug />
+    </div>
   );
 }
 
